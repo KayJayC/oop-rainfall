@@ -1,0 +1,31 @@
+This is the list of all the needed changes that were made
+
+- added a header title to the document
+- changed from using the standard namespace
+-seperated the blocks of code (exp //input hourly
+// input hourly rainfall data
+    std::vector<double> rainfall;
+    double n;
+    while (std::cin >> n) {
+        rainfall.push_back(n);
+    }
+    if (!rainfall.size())
+        return 1;
+
+    // calculate average rainfall
+    auto total = rainfall[0];
+    for (int i = 1; i < rainfall.size(); ++i) {
+        total += rainfall[i];
+    }
+    auto average = total / rainfall.size();
+
+    // calculate heaviest rainfall
+    auto max = rainfall[0];
+    for (int i = 1; i < rainfall.size(); ++i) {
+        if (rainfall[i] > max)
+            max = rainfall[i];
+    }
+-how the variables were float and then changed it to double
+ Now each variable is grouped with the black of code that its used in\
+-added error catching statements (return 1 after input and return 0 after output)
+- took out the calculation in the c++ file
