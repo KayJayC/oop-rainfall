@@ -8,26 +8,16 @@
 #include <vector>
 #include <iterator>
 #include <algorithm>
+#include <numeric>
 
 //average of rainfall data
 double average(const std::vector<double>& data){
-    auto total= data[0];
-    for (int i = 1; i < data.size(); ++i){
-        total += data [i];
-    }
-    return total /data.size();
+    return std::accumulate (data.begin(), data.end(), 0.0)/data.size();
 }
 
 //heaviest Rainfall
 double heaviest(const std::vector<double>& data){
     return *std::max_element (data.begin(), data.end());
-
-    auto max= data[0];
-    for (int i=1; i < data.size(); ++i){
-        if (data[i] > max)
-            max= data[i];
-    }
-    return max;
 }
 
 
