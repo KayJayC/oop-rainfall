@@ -7,15 +7,14 @@
 #include <iomanip>
 #include <vector>
 
-using namespace std;
 
 int main() {
-    vector<float> rainfall;
+    std::vector<float> rainfall;
     float t;
     float m;
     float n;
 
-    while (cin >>n){
+    while (std::cin >>n){
         rainfall.push_back(n);
     }
     t= rainfall[0];
