@@ -1,3 +1,8 @@
+/*
+    rainfall.cpp
+    This is a rainfall report. Individiual rain amounts per hour are input. output
+    is the average and heaviest hourly rainfall.
+*/
 #include <iostream>
 #include <iomanip>
 #include <vector>
